@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "phantom": "^6.3.0",
-    "phantomjs": "^2.1.7"
+    "phantomjs": "^2.1.7",
+    "phantomjs-prebuilt": "^2.1.16"
   }
 }
