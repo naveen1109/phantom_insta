@@ -1,1 +1,1 @@
-web: npm start
+web: phantomjs phantom_script.js
