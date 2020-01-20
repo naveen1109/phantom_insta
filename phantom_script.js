@@ -14,10 +14,12 @@ var items =[];
 page.viewportSize = { width: 1280, height : 1024 };
 
 function doRender() {
-    console.log(initialtags+betweentags+lasttags);
+    //console.log(initialtags+betweentags+lasttags);
     var webserver = require('webserver');
 var server = webserver.create();
-var service = server.listen(3000||process.env.Port, function(request, response) {
+var service = server.listen(process.env.PORT, {
+ // 'keepAlive': true
+},  function(request, response) {
   response.statusCode = 200;
   response.write(initialtags+betweentags+lasttags);
   response.close();
