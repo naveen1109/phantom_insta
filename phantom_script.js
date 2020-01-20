@@ -10,14 +10,16 @@ var page          = require('webpage').create(),
 var lasttags = '</body></html>'
 var betweentags = ""
 var items =[];
+const port =process.env.PORT||5000
 
 page.viewportSize = { width: 1280, height : 1024 };
 
 function doRender() {
     //console.log(initialtags+betweentags+lasttags);
+
     var webserver = require('webserver');
 var server = webserver.create();
-var service = server.listen(process.env.PORT, '0.0.0.0', {
+var service = server.listen('0.0.0.0:'+port, {
  // 'keepAlive': true
 },  function(request, response) {
   response.statusCode = 200;
