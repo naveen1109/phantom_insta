@@ -19,7 +19,7 @@ function doRender() {
     //console.log(initialtags+betweentags+lasttags);
     var webserver = require('webserver');
 var server = webserver.create();
-var service = server.listen('0.0.0.0:'+process.env.port, {
+var service = server.listen('0.0.0.0:'+port, {
  // 'keepAlive': true
 },  function(request, response) {
   response.statusCode = 200;
